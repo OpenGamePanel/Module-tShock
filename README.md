@@ -1,2 +1,2 @@
-# Module-tShock_Admin_Terraria
+# Module-tShock
 tShock Administration module for Terraria
