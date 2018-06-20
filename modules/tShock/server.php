@@ -23,48 +23,48 @@
  */
 function exec_ogp_module()
 {
-	include "modules/tShock/shared.php";
+	include "modules/tshock/shared.php";
 	if($continue)
 	{
 		?>	
 		<ul class="nav nav-tabs" role="tablist">
 			<li class="nav-item">
-				<a href="?m=tShock&show=broadcast&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+				<a href="?m=tshock&show=broadcast&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					Broadcast
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="?m=tShock&show=motd&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+				<a href="?m=tshock&show=motd&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					Message Of The Day
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="?m=tShock&show=off&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+				<a href="?m=tshock&show=off&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					Off
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="?m=tShock&show=rawcmd&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+				<a href="?m=tshock&show=rawcmd&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					Rawcmd
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="?m=tShock&show=reload&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+				<a href="?m=tshock&show=reload&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					Reload
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="?m=tShock&show=restart&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+				<a href="?m=tshock&show=restart&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					Restart
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="?m=tShock&show=rules&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+				<a href="?m=tshock&show=rules&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					Rules
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="?m=tShock&show=status&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+				<a href="?m=tshock&show=status&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					Status
 				</a>
 			</li>
@@ -76,7 +76,7 @@ function exec_ogp_module()
 			<div class="row">
 				<div class="col-md-12">
 					<p class="mbr-text py-5 mbr-fonts-style display-7"></p>
-						<form action="?m=tShock&show=broadcast&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
+						<form action="?m=tshock&show=broadcast&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
 							Message: <input type="text" name="msg" placeholder="The message to broadcast" size="45"><br>
 							<br><input type="submit" name="broadcast" value="Submit">
 						</form><?php
@@ -119,7 +119,7 @@ function exec_ogp_module()
 				<div class="row">
 					<div class="col-md-12">
 						<p class="mbr-text py-5 mbr-fonts-style display-7"></p>
-							<form action="?m=tShock&show=off&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
+							<form action="?m=tshock&show=off&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
 								Message: <input type="text" name="message" placeholder="The shutdown message" size="35"><br><br>
 								Confrim (Required to confirm that you want to turn the server off):<input type="checkbox" name="confirm" value="confirm"><br><br>
 								No save (Shutdown without saving):<input type="checkbox" name="nosave" value="nosave"><br>
@@ -154,7 +154,7 @@ function exec_ogp_module()
 				<div class="row">
 					<div class="col-md-12">
 						<p class="mbr-text py-5 mbr-fonts-style display-7"></p>
-							<form action="?m=tShock&show=rawcmd&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
+							<form action="?m=tshock&show=rawcmd&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
 								cmd: <input type="text" name="cmd" placeholder="The command and arguments to execute" size="45"><br>
 								<br><input type="submit" name="rawcmd" value="Submit">
 							</form>
@@ -189,7 +189,7 @@ function exec_ogp_module()
 				<div class="row">
 					<div class="col-md-12">
 						<p class="mbr-text py-5 mbr-fonts-style display-7"></p>
-							<form action="?m=tShock&show=reload&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
+							<form action="?m=tshock&show=reload&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
 								<input type="submit" name="reload" value="Reload configuration, permissions and regions">
 							</form>
 					</div>
@@ -217,7 +217,7 @@ function exec_ogp_module()
 				<div class="row">
 					<div class="col-md-12">
 						<p class="mbr-text py-5 mbr-fonts-style display-7"></p>
-							<form action="?m=tShock&show=restart&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
+							<form action="?m=tshock&show=restart&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
 								Message: <input type="text" name="message" placeholder="The shutdown message" size="35"><br><br>
 								Confrim (Required to confirm that you want to restart the server):<input type="checkbox" name="confirm" value="confirm"><br><br>
 								No save (Shutdown without saving):<input type="checkbox" name="nosave" value="nosave"><br>
@@ -252,7 +252,7 @@ function exec_ogp_module()
 				<div class="row">
 					<div class="col-md-12">
 						<p class="mbr-text py-5 mbr-fonts-style display-7"></p>
-							<form action="?m=tShock&show=rules&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
+							<form action="?m=tshock&show=rules&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
 								<input type="submit" name="rules" value="Show Rules">
 							</form>
 					</div>
@@ -285,7 +285,7 @@ function exec_ogp_module()
 				<div class="row">
 					<div class="col-md-12">
 						<p class="mbr-text py-5 mbr-fonts-style display-7"></p>
-							<form action="?m=tShock&show=status&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
+							<form action="?m=tshock&show=status&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
 								Show Players:<input type="checkbox" name="players" value="players"><br>
 								Show Rules:<input type="checkbox" name="rules" value="rules"><br>
 								<br><input type="submit" name="status" value="Submit">

@@ -23,16 +23,16 @@
  */
 
 // Module general information
-$module_title = "tShock";
+$module_title = "tshock";
 $module_version = "Alpha";
 $db_version = 0;
 $module_required = FALSE;
-$module_menus = array( array( 'subpage' => '', 'name'=>'tShock', 'group'=>'user' ) );
+$module_menus = array( array( 'subpage' => '', 'name'=>'tshock', 'group'=>'user' ) );
 
 $install_queries = array();
 $install_queries[0] = array(
-    "DROP TABLE IF EXISTS ".OGP_DB_PREFIX."tShock;",
-    "CREATE TABLE ".OGP_DB_PREFIX."tShock (
+    "DROP TABLE IF EXISTS ".OGP_DB_PREFIX."tshock;",
+    "CREATE TABLE ".OGP_DB_PREFIX."tshock (
         `token_id` int(11) NOT NULL auto_increment,
 		`ip` varchar(255) NOT NULL,
 		`port` int(11) NOT NULL,

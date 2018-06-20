@@ -1,5 +1,5 @@
 <h2 class="mbr-section-title align-center pb-5 mbr-fonts-style display-2">
-	tShock API Module
+	tshock API Module
 </h2>
 <?php
 global $db, $view;
@@ -54,7 +54,7 @@ else
 }
 
 
-include 'modules/tShock/functions.php';
+include 'modules/tshock/functions.php';
 
 if($_GET['p'] != 'create_token')
 {
@@ -62,7 +62,7 @@ if($_GET['p'] != 'create_token')
 
 	if(!$token)
 	{
-		$view->refresh('home.php?m=tShock&p=create_token&home_id-mod_id-ip-port='.$_GET['home_id-mod_id-ip-port'], 0);
+		$view->refresh('home.php?m=tshock&p=create_token&home_id-mod_id-ip-port='.$_GET['home_id-mod_id-ip-port'], 0);
 		$continue = False;
 		return;
 	}
@@ -71,7 +71,7 @@ if($_GET['p'] != 'create_token')
 
 	if($token_test['status'] != '200')
 	{
-		$view->refresh('home.php?m=tShock&p=create_token&home_id-mod_id-ip-port='.$_GET['home_id-mod_id-ip-port'], 0);
+		$view->refresh('home.php?m=tshock&p=create_token&home_id-mod_id-ip-port='.$_GET['home_id-mod_id-ip-port'], 0);
 		$continue = False;
 		return;
 	}
@@ -94,19 +94,19 @@ if($_GET['p'] != 'create_token')
 }
 else
 {
-	if(!isTshockAvailable($ip, $port))
+	if(!istshockAvailable($ip, $port))
 		$continue = False;
 	return;
 }
 ?>
 <ul class="nav nav-tabs" role="tablist">
 	<li class="nav-item">
-		<a href="?m=tShock&p=bans&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">Bans</a>
+		<a href="?m=tshock&p=bans&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">Bans</a>
 	</li>
 	<li class="nav-item">
-		<a href="?m=tShock&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">Server</a>
+		<a href="?m=tshock&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">Server</a>
 	</li>
 	<li class="nav-item">
-		<a href="?m=tShock&p=users&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">Users</a>
+		<a href="?m=tshock&p=users&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">Users</a>
 	</li>
 </ul>

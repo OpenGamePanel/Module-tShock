@@ -11,11 +11,11 @@ function getResponse($ip, $port, $query, $params = array()){
 	return json_decode(file_get_contents($api_request), True);
 }
 
-function isTshockAvailable($ip, $port){
+function istshockAvailable($ip, $port){
 	$api_url = 'http://'.$ip.':'.($port + 101);
 	if(!file_get_contents($api_url)) 
 	{
-		print_failure("Tshock is not available in the selected server, or the server is offline");
+		print_failure("tshock is not available in the selected server, or the server is offline");
 		return false;
 	}
     return true;
@@ -23,13 +23,13 @@ function isTshockAvailable($ip, $port){
 
 function saveToken($ip, $port, $token){
 	global $db;
-	$query = sprintf("DELETE FROM `%stShock` WHERE `ip` = '%s' AND `port` = '%d'",
+	$query = sprintf("DELETE FROM `%stshock` WHERE `ip` = '%s' AND `port` = '%d'",
 			$db->getTablePrefix(),
 			$db->realEscapeSingle($ip),
 			$db->realEscapeSingle($port));
 	if($db->query($query))
 	{
-		$query = sprintf("INSERT INTO `%stShock` (`ip`,`port`,`token`) VALUES('%s', '%d', '%s')",
+		$query = sprintf("INSERT INTO `%stshock` (`ip`,`port`,`token`) VALUES('%s', '%d', '%s')",
 				$db->getTablePrefix(),
 				$db->realEscapeSingle($ip),
 				$db->realEscapeSingle($port),
@@ -44,7 +44,7 @@ function saveToken($ip, $port, $token){
 
 function getToken($ip, $port){
 	global $db;
-	$query = sprintf("SELECT `token` FROM `%stShock` WHERE `ip`='%s' AND `port`='%d';",
+	$query = sprintf("SELECT `token` FROM `%stshock` WHERE `ip`='%s' AND `port`='%d';",
 			$db->getTablePrefix(),
 			$db->realEscapeSingle($ip),
 			$db->realEscapeSingle($port));

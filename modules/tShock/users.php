@@ -23,39 +23,39 @@
  */
 function exec_ogp_module()
 {
-	include "modules/tShock/shared.php";
+	include "modules/tshock/shared.php";
 	if($continue)
 	{
 		?>	
 		<ul class="nav nav-tabs" role="tablist">
-			<li class="nav-item"><a href="?m=tShock&p=users&show=create&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+			<li class="nav-item"><a href="?m=tshock&p=users&show=create&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					Create User
 				</a></li>
-			<li class="nav-item"><a href="?m=tShock&p=users&show=destroy&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+			<li class="nav-item"><a href="?m=tshock&p=users&show=destroy&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					Destroy User
 				</a></li>
-			<li class="nav-item"><a href="?m=tShock&p=users&show=activelist&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+			<li class="nav-item"><a href="?m=tshock&p=users&show=activelist&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					Active List
 				</a></li>
-			<li class="nav-item"><a href="?m=tShock&p=users&show=list&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+			<li class="nav-item"><a href="?m=tshock&p=users&show=list&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					List
 				</a></li>
-			<li class="nav-item"><a href="?m=tShock&p=users&show=read&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+			<li class="nav-item"><a href="?m=tshock&p=users&show=read&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					Read
 				</a></li>
-			<li class="nav-item"><a href="?m=tShock&p=users&show=update&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+			<li class="nav-item"><a href="?m=tshock&p=users&show=update&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 					Update
 				</a></li>
 		</ul>			
 		<?php
-		if($_GET['show'] == 'create') //Create a new TShock user account.
+		if($_GET['show'] == 'create') //Create a new tshock user account.
 		{
 		?>
 			<div id="tab4" class="tab-pane" role="tabpanel">
 				<div class="row">
 					<div class="col-md-12">
 						<p class="mbr-text py-5 mbr-fonts-style display-7"></p>
-						<form action="?m=tShock&p=users&show=create&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
+						<form action="?m=tshock&p=users&show=create&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
 							Username: <input type="text" name="user" placeholder="The user account name for the new account" size="45"><br><br>
 							Group: <input type="text" name="group" placeholder="The group the new account should be assigned" size="49"><br><br>											
 							Password: <input type="text" name="password" placeholder="The password for the new account" size="46"><br><br>
@@ -83,14 +83,14 @@ function exec_ogp_module()
 			}
 		}
 		
-		if($_GET['show'] == 'destroy') //Destroy a TShock user account
+		if($_GET['show'] == 'destroy') //Destroy a tshock user account
 		{
 		?>
 			<div id="tab4" class="tab-pane" role="tabpanel">
 				<div class="row">
 					<div class="col-md-12">
 						<p class="mbr-text py-5 mbr-fonts-style display-7"></p>
-						<form action="?m=tShock&p=users&show=destroy&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
+						<form action="?m=tshock&p=users&show=destroy&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
 							Username/ID: <input type="text" name="user" placeholder="Name or id of account to lookup" size="35"><br><br>
 							Lookup Type: <input type="radio" name="type" value="name" checked> Name
 										 <input type="radio" name="type" value="id"> ID<br><br>
@@ -136,7 +136,7 @@ function exec_ogp_module()
 				print_failure("No Token Found!");
 		}
 		
-		if($_GET['show'] == 'list') //Lists all user accounts in the TShock database.
+		if($_GET['show'] == 'list') //Lists all user accounts in the tshock database.
 		{
 			if($token){
 				$params = array('token' => $token);
@@ -163,7 +163,7 @@ function exec_ogp_module()
 				<div class="row">
 					<div class="col-md-12">
 						<p class="mbr-text py-5 mbr-fonts-style display-7"></p>
-						<form action="?m=tShock&p=users&show=read&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
+						<form action="?m=tshock&p=users&show=read&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
 							Username: <input type="text" name="user" placeholder="username or id of account to look up" size="35"><br><br>
 							Lookup Type: <input type="radio" name="type" value="name" checked> Name
 										 <input type="radio" name="type" value="id"> ID<br><br>
@@ -197,7 +197,7 @@ function exec_ogp_module()
 				<div class="row">
 					<div class="col-md-12">
 						<p class="mbr-text py-5 mbr-fonts-style display-7"></p>
-						<form action="?m=tShock&p=users&show=update&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
+						<form action="?m=tshock&p=users&show=update&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
 							Username: <input type="text" name="user" placeholder="name or id of account to lookup" size="35"><br><br>
 							Lookup Type: <input type="radio" name="type" value="name" checked> Name
 										 <input type="radio" name="type" value="id"> ID<br><br>

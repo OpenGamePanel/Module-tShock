@@ -23,23 +23,23 @@
  */
 function exec_ogp_module()
 {
-	include "modules/tShock/shared.php";
+	include "modules/tshock/shared.php";
 	if($continue)
 	{
 		?>
 		<ul class="nav nav-tabs" role="tablist">
 			<li class="nav-item">
-				<a href="?m=tShock&p=bans&show=create&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+				<a href="?m=tshock&p=bans&show=create&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 				Create
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="?m=tShock&p=bans&show=list&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+				<a href="?m=tshock&p=bans&show=list&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 				List
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="?m=tShock&p=bans&show=read&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
+				<a href="?m=tshock&p=bans&show=read&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>">
 				Read
 				</a>
 			</li>
@@ -52,7 +52,7 @@ function exec_ogp_module()
 				<div class="row">
 					<div class="col-md-12">
 						<p class="mbr-text py-5 mbr-fonts-style display-7"></p>
-							<form action="?m=tShock&p=bans&show=create&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
+							<form action="?m=tshock&p=bans&show=create&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
 								IP: <input type="text" name="ip" placeholder="The IP to ban" size="34"><br><br>
 								Name: <input type="text" name="name" placeholder="The name to ban" size="30"><br><br>
 								Reason: <input type="text" name="reason" placeholder="Reason to assign the ban" size="29"><br>
@@ -79,7 +79,7 @@ function exec_ogp_module()
 			}
 		}
 		
-		if($_GET['show'] == 'list') //View all bans in the TShock database.
+		if($_GET['show'] == 'list') //View all bans in the tshock database.
 		{
 			if($token){
 				$params = array('token' => $token);
@@ -108,7 +108,7 @@ function exec_ogp_module()
 				<div class="row">
 					<div class="col-md-12">
 						<p class="mbr-text py-5 mbr-fonts-style display-7"></p>
-							<form action="?m=tShock&p=bans&show=read&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
+							<form action="?m=tshock&p=bans&show=read&home_id-mod_id-ip-port=<?=$_GET['home_id-mod_id-ip-port']?>" method="POST">
 								Username or IP: <input type="text" name="ban" placeholder="IP or name to look up" size="35"><br><br>
 								Type: <input type="radio" name="type" value="ip" checked> IP
 									  <input type="radio" name="type" value="name"> Name<br><br>
